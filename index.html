@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samia Jannat | সামিয়া জান্নাত</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #E1306C;
+            --secondary-color: #833AB4;
+            --accent-color: #405DE6;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-primary: #1a1a1a;
+            --text-secondary: #666666;
+            --text-light: #999999;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --shadow-light: 0 2px 8px rgba(0, 0, 0, 0.05);
+            --border-radius: 16px;
+            --border-radius-sm: 12px;
+        }
+
+        body {
+            font-family: 'Hind Siliguri', 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Header */
+        .header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: var(--card-bg);
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: var(--shadow-light);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.95);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(225, 48, 108, 0.2);
+        }
+
+        .site-name {
+            font-family: 'Poppins', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: -0.5px;
+        }
+
+        /* Bio Section */
+        .bio-section {
+            background-color: var(--card-bg);
+            margin: 20px 16px 10px;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bio-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+        }
+
+        .bio-name {
+            font-size: 26px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+            line-height: 1.3;
+        }
+
+        .bio-text {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 4px;
+            font-weight: 400;
+        }
+
+        .bio-highlight {
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        /* Attractive Title before Banner Ad */
+        .ad-attractive-title {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            margin: 15px 16px 0;
+            padding: 14px 20px;
+            border-radius: var(--border-radius-sm);
+            text-align: center;
+            color: white;
+            font-weight: 700;
+            font-size: 17px;
+            box-shadow: var(--shadow-light);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .ad-attractive-title::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            animation: shine 3s infinite;
+        }
+
+        @keyframes shine {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        /* Banner Ad (300x250) - After Attractive Title */
+        .banner-ad-section {
+            background-color: var(--card-bg);
+            margin: 5px 16px 20px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            position: relative;
+            border: 2px solid transparent;
+            background-clip: padding-box;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .banner-ad-section:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+        }
+
+        .banner-ad-container {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #f5f7fa, #e3e7f1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .banner-ad-container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                to right,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.1) 50%,
+                rgba(255, 255, 255, 0) 100%
+            );
+            transform: rotate(30deg);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) rotate(30deg); }
+            100% { transform: translateX(100%) rotate(30deg); }
+        }
+
+        .banner-ad-label {
+            position: absolute;
+            bottom: 12px;
+            right: 12px;
+            font-size: 11px;
+            color: var(--text-light);
+            background: rgba(255, 255, 255, 0.95);
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-weight: 500;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        /* Native Banner - Slim Design in Video Feed */
+        .native-banner-section {
+            background-color: var(--card-bg);
+            margin: 20px 16px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            position: relative;
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #e4e6eb;
+        }
+
+        .native-banner-label {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 11px;
+            color: var(--text-light);
+            background: rgba(255, 255, 255, 0.9);
+            padding: 2px 8px;
+            border-radius: 10px;
+            z-index: 2;
+        }
+
+        /* Social Icons */
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin: 24px 16px;
+            padding: 0 16px;
+        }
+
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: white;
+            box-shadow: var(--shadow-light);
+        }
+
+        .social-icon:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: var(--shadow);
+        }
+
+        .social-icon.facebook { 
+            background: linear-gradient(135deg, #1877f2, #0d5cb6);
+        }
+        .social-icon.youtube { 
+            background: linear-gradient(135deg, #ff0000, #cc0000);
+        }
+        .social-icon.instagram { 
+            background: linear-gradient(135deg, #E1306C, #833AB4, #405DE6);
+        }
+        .social-icon.telegram { 
+            background: linear-gradient(135deg, #0088cc, #006699);
+        }
+
+        /* Buttons */
+        .buttons-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 14px;
+            margin: 24px 16px;
+            padding: 0 10px;
+        }
+
+        .action-btn {
+            padding: 14px 28px;
+            border: none;
+            border-radius: 50px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            box-shadow: var(--shadow-light);
+            min-width: 160px;
+        }
+
+        .action-btn.watch {
+            background: linear-gradient(135deg, var(--primary-color), #ff6b9d);
+            color: white;
+        }
+
+        .action-btn.support {
+            background: linear-gradient(135deg, var(--secondary-color), #a855d4);
+            color: white;
+        }
+
+        .action-btn.explore {
+            background: linear-gradient(135deg, var(--accent-color), #6a82fb);
+            color: white;
+        }
+
+        .action-btn.click {
+            background: linear-gradient(135deg, #00c9ff, #92fe9d);
+            color: var(--text-primary);
+        }
+
+        .action-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        .action-btn i {
+            font-size: 18px;
+        }
+
+        /* Video Feed */
+        .video-feed {
+            max-width: 500px;
+            margin: 0 auto 60px;
+        }
+
+        .video-card {
+            background-color: var(--card-bg);
+            margin: 20px 16px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            background-color: #000;
+            aspect-ratio: 9/16; /* Instagram Reels aspect ratio */
+            overflow: hidden;
+        }
+
+        .video-player {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .video-caption {
+            padding: 18px 20px;
+            font-size: 17px;
+            font-weight: 600;
+            color: var(--text-primary);
+            line-height: 1.5;
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .video-caption::before {
+            content: "📱 ";
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--card-bg);
+            padding: 30px 16px;
+            text-align: center;
+            color: var(--text-secondary);
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+            margin-top: 20px;
+        }
+
+        .copyright {
+            font-size: 15px;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .footer-text {
+            font-size: 13px;
+            color: var(--text-light);
+            max-width: 500px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Loading */
+        .loading {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-light);
+            font-size: 16px;
+        }
+
+        .loading i {
+            font-size: 24px;
+            margin-bottom: 12px;
+            color: var(--primary-color);
+        }
+
+        /* Video Controls */
+        .video-controls {
+            position: absolute;
+            bottom: 16px;
+            right: 16px;
+            display: flex;
+            gap: 10px;
+            z-index: 10;
+        }
+
+        .control-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 18px;
+        }
+
+        .control-btn:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+            transform: scale(1.1);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .header {
+                padding: 10px 16px;
+            }
+            
+            .logo-img {
+                width: 44px;
+                height: 44px;
+            }
+            
+            .site-name {
+                font-size: 20px;
+            }
+            
+            .bio-section {
+                margin: 16px 12px 8px;
+                padding: 18px;
+            }
+            
+            .bio-name {
+                font-size: 22px;
+            }
+            
+            .bio-text {
+                font-size: 13px;
+            }
+            
+            .ad-attractive-title {
+                margin: 12px 12px 0;
+                padding: 12px 16px;
+                font-size: 16px;
+            }
+            
+            .banner-ad-section {
+                margin: 4px 12px 16px;
+            }
+            
+            .banner-ad-container {
+                height: 220px;
+            }
+            
+            .video-card, .native-banner-section {
+                margin: 16px 12px;
+            }
+            
+            .video-container {
+                aspect-ratio: 9/16;
+            }
+            
+            .video-caption {
+                padding: 16px 18px;
+                font-size: 16px;
+            }
+            
+            .buttons-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+            }
+            
+            .action-btn {
+                width: 90%;
+                max-width: 280px;
+                padding: 13px 24px;
+            }
+            
+            .social-icons {
+                gap: 14px;
+            }
+            
+            .social-icon {
+                width: 46px;
+                height: 46px;
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .site-name {
+                font-size: 18px;
+            }
+            
+            .bio-name {
+                font-size: 20px;
+            }
+            
+            .ad-attractive-title {
+                font-size: 15px;
+                padding: 11px 14px;
+            }
+            
+            .video-caption {
+                font-size: 15px;
+                padding: 14px 16px;
+            }
+            
+            .action-btn {
+                font-size: 15px;
+                min-width: 140px;
+            }
+            
+            .banner-ad-container {
+                height: 200px;
+            }
+            
+            .native-banner-section {
+                min-height: 90px;
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .video-card, .banner-ad-section, .native-banner-section, .bio-section, .ad-attractive-title {
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo-container">
+            <img src="logo.jpg" alt="Samia Jannat Logo" class="logo-img" onerror="this.style.display='none'; document.querySelector('.logo-fallback').style.display='flex';">
+            <div class="logo-fallback" style="display: none; width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: white; align-items: center; justify-content: center; font-weight: bold; font-size: 20px;">
+                SJ
+            </div>
+            <div class="site-name">Samia Jannat</div>
+        </div>
+    </header>
+
+    <!-- Bio Section -->
+    <section class="bio-section">
+        <h1 class="bio-name">সামিয়া জান্নাত <span class="bio-highlight">(সিমু)</span></h1>
+        <p class="bio-text">২০ বছরের এক টুকরো জীবন 🌙</p>
+        <p class="bio-text">স্বপ্ন দেখি, চেষ্টা করি, ভরসা রাখি 🤍</p>
+    </section>
+
+    <!-- Attractive Title before Banner Ad -->
+    <div class="ad-attractive-title" id="attractive-title">
+        <i class="fas fa-bolt" style="margin-right: 8px;"></i>
+        <span id="attractive-text">এখানে ক্লিক করুন এবং চমকপ্রদ অফার পান!</span>
+        <i class="fas fa-hand-point-up" style="margin-left: 8px;"></i>
+    </div>
+
+    <!-- Banner Ad (300x250) - After Attractive Title -->
+    <div class="banner-ad-section" id="banner-ad-300x250">
+        <div class="banner-ad-container">
+            <div style="text-align: center; padding: 20px; z-index: 1; position: relative;">
+                <i class="fas fa-gift" style="font-size: 40px; color: var(--primary-color); margin-bottom: 15px; animation: bounce 2s infinite;"></i>
+                <div style="font-weight: 700; margin-bottom: 8px; color: var(--text-primary); font-size: 18px;" id="ad-offer-text">এক্সক্লুসিভ অফার!</div>
+                <div style="font-size: 14px; color: var(--text-secondary); margin-bottom: 15px;" id="ad-description">সীমিত সময়ের জন্য বিশেষ ডিসকাউন্ট</div>
+                <div style="background: var(--primary-color); color: white; padding: 8px 20px; border-radius: 20px; font-weight: 600; font-size: 15px; display: inline-block;">
+                    এখনই ক্লিক করুন
+                </div>
+            </div>
+            <div class="banner-ad-label">বিজ্ঞাপন</div>
+        </div>
+    </div>
+
+    <!-- Social Icons -->
+    <div class="social-icons">
+        <div class="social-icon facebook" onclick="openRandomLink()">
+            <i class="fab fa-facebook-f"></i>
+        </div>
+        <div class="social-icon youtube" onclick="openRandomLink()">
+            <i class="fab fa-youtube"></i>
+        </div>
+        <div class="social-icon instagram" onclick="openRandomLink()">
+            <i class="fab fa-instagram"></i>
+        </div>
+        <div class="social-icon telegram" onclick="openRandomLink()">
+            <i class="fab fa-telegram-plane"></i>
+        </div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="buttons-container">
+        <button class="action-btn watch" onclick="openRandomLink()">
+            <i class="fas fa-play-circle"></i> Watch More
+        </button>
+        <button class="action-btn support" onclick="openRandomLink()">
+            <i class="fas fa-heart"></i> Support Me
+        </button>
+        <button class="action-btn explore" onclick="openRandomLink()">
+            <i class="fas fa-compass"></i> Explore Now
+        </button>
+        <button class="action-btn click" onclick="openRandomLink()">
+            <i class="fas fa-mouse-pointer"></i> Click Here
+        </button>
+    </div>
+
+    <!-- Video Feed -->
+    <div class="video-feed" id="videoFeed">
+        <div class="loading">
+            <i class="fas fa-spinner fa-spin"></i>
+            <div>লোড হচ্ছে...</div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="copyright">© Samia Jannat</div>
+        <div class="footer-text">স্বপ্ন দেখি, চেষ্টা করি, ভরসা রাখি 🤍 | সকল স্বত্ব সংরক্ষিত</div>
+    </footer>
+
+    <!-- ========== UPDATED AD SCRIPTS ========== -->
+    
+    <!-- Popunder ads (New) -->
+    <script src="https://pl28602120.effectivegatecpm.com/2e/1e/dd/2e1edd088c70a3a36c7956395c5eb059.js"></script>
+
+    <!-- Social Bar ads (New) -->
+    <script src="https://pl28602136.effectivegatecpm.com/cc/8b/7a/cc8b7a466a76c4f900bb65206a3e44d2.js"></script>
+
+    <!-- Smartlink ads (New) -->
+    <script>
+        const smartlinkKey = "https://www.effectivegatecpm.com/rb6x2we7uz?key=f58a164eb03970f05485a10f13b1e518";
+    </script>
+
+    <script>
+        // Video data with titles
+        const videoData = [
+            { filename: "1.mp4", title: "একটু থামো, এই মুহূর্তটা তোমার 🤍" },
+            { filename: "2.mp4", title: "স্বপ্ন ছোট হলেও সাহসটা বড় 🌙" },
+            { filename: "3.mp4", title: "মন যদি বলে, এগিয়ে যাও" },
+            { filename: "4.mp4", title: "আজকের দিনটা নিজের জন্য" },
+            { filename: "5.mp4", title: "সবাই বুঝবে না, তবু চলি" },
+            { filename: "6.mp4", title: "নীরবতায়ও শক্তি থাকে" },
+            { filename: "7.mp4", title: "হাল ছাড়িনি, ছাড়বোও না" },
+            { filename: "8.mp4", title: "নিজেকে বিশ্বাস করাই সবচেয়ে বড় জয়" },
+            { filename: "9.mp4", title: "এটাই আমার গল্প" },
+            { filename: "10.mp4", title: "শেষ না, এটা শুরু" }
+        ];
+
+        // Direct links for random opening (Updated)
+        const directLinks = [
+            "https://www.effectivegatecpm.com/uaw2hhminv?key=e8c0f110815e618bc184ba43e3f68e79",
+            "https://www.effectivegatecpm.com/utsu280n?key=1573b3d30150666f41a1b89fc41a58ca",
+            "https://www.effectivegatecpm.com/n3kkukx1?key=248cbfd1dcc11df74784b0a40d2accad",
+            "https://www.effectivegatecpm.com/n5krwq8nm?key=3f99cc2df80ba8a23396ba43198c45d8"
+        ];
+
+        // Attractive titles for the banner ad section
+        const attractiveTitles = [
+            "এখানে ক্লিক করুন এবং চমকপ্রদ অফার পান!",
+            "আপনার জন্য বিশেষ সুযোগ! ক্লিক করুন এখনই!",
+            "এই অফারটি শুধু আপনার জন্য! দেখতে ক্লিক করুন",
+            "বিশেষ ডিসকাউন্ট পেতে এখনই ক্লিক করুন!",
+            "এক্সক্লুসিভ অফার দেখতে ক্লিক করুন!",
+            "আপনি নির্বাচিত! বিশেষ পুরস্কার পেতে ক্লিক করুন"
+        ];
+
+        // Offer texts for the banner ad
+        const offerTexts = [
+            "এক্সক্লুসিভ অফার!",
+            "বিশেষ ডিসকাউন্ট!",
+            "লিমিটেড টাইম অফার!",
+            "শুধু আপনার জন্য!",
+            "স্পেশাল গিফট!",
+            "মিস করবেন না!"
+        ];
+
+        // Description texts for the banner ad
+        const descriptionTexts = [
+            "সীমিত সময়ের জন্য বিশেষ ডিসকাউন্ট",
+            "শুধু আজকের জন্য এক্সক্লুসিভ অফার",
+            "প্রথম ১০০ জনের জন্য ফ্রি গিফট",
+            "বিশাল ডিসকাউন্ট পেতে এখনই ক্লিক করুন",
+            "আপনার জন্য অপেক্ষা করছে বিশেষ উপহার",
+            "একবারের সুযোগ, মিস করবেন না"
+        ];
+
+        // Function to get a random element from array
+        function getRandomElement(array) {
+            return array[Math.floor(Math.random() * array.length)];
+        }
+
+        // Function to open random link
+        function openRandomLink() {
+            const randomLink = getRandomElement(directLinks);
+            window.open(randomLink, '_blank');
+        }
+
+        // Function to set attractive content for banner ad section
+        function setAttractiveContent() {
+            const attractiveTitle = document.getElementById('attractive-text');
+            const offerText = document.getElementById('ad-offer-text');
+            const descriptionText = document.getElementById('ad-description');
+            
+            if (attractiveTitle) {
+                attractiveTitle.textContent = getRandomElement(attractiveTitles);
+            }
+            
+            if (offerText) {
+                offerText.textContent = getRandomElement(offerTexts);
+            }
+            
+            if (descriptionText) {
+                descriptionText.textContent = getRandomElement(descriptionTexts);
+            }
+            
+            // Add click event to attractive title and banner ad
+            const attractiveTitleDiv = document.getElementById('attractive-title');
+            const bannerAd = document.getElementById('banner-ad-300x250');
+            
+            if (attractiveTitleDiv) {
+                attractiveTitleDiv.addEventListener('click', openRandomLink);
+            }
+            
+            if (bannerAd) {
+                bannerAd.addEventListener('click', openRandomLink);
+            }
+        }
+
+        // Function to create video cards
+        function createVideoCard(video, index) {
+            const videoCard = document.createElement('div');
+            videoCard.className = 'video-card';
+            videoCard.id = `video-${index}`;
+            
+            // Video container
+            const videoContainer = document.createElement('div');
+            videoContainer.className = 'video-container';
+            
+            // Video element
+            const videoElement = document.createElement('video');
+            videoElement.className = 'video-player';
+            videoElement.playsInline = true;
+            videoElement.loop = true;
+            videoElement.muted = false; // Sound enabled
+            videoElement.preload = 'metadata';
+            
+            // Video source
+            const source = document.createElement('source');
+            source.src = video.filename;
+            source.type = 'video/mp4';
+            
+            videoElement.appendChild(source);
+            
+            // Video controls
+            const controlsDiv = document.createElement('div');
+            controlsDiv.className = 'video-controls';
+            
+            const muteBtn = document.createElement('button');
+            muteBtn.className = 'control-btn';
+            muteBtn.innerHTML = '<i class="fas fa-volume-up"></i>';
+            muteBtn.onclick = (e) => {
+                e.stopPropagation();
+                videoElement.muted = !videoElement.muted;
+                muteBtn.innerHTML = videoElement.muted ? 
+                    '<i class="fas fa-volume-mute"></i>' : 
+                    '<i class="fas fa-volume-up"></i>';
+            };
+            
+            const fullscreenBtn = document.createElement('button');
+            fullscreenBtn.className = 'control-btn';
+            fullscreenBtn.innerHTML = '<i class="fas fa-expand"></i>';
+            fullscreenBtn.onclick = (e) => {
+                e.stopPropagation();
+                if (videoElement.requestFullscreen) {
+                    videoElement.requestFullscreen();
+                } else if (videoElement.webkitRequestFullscreen) {
+                    videoElement.webkitRequestFullscreen();
+                }
+            };
+            
+            controlsDiv.appendChild(muteBtn);
+            controlsDiv.appendChild(fullscreenBtn);
+            
+            videoContainer.appendChild(videoElement);
+            videoContainer.appendChild(controlsDiv);
+            
+            // Video caption
+            const caption = document.createElement('div');
+            caption.className = 'video-caption';
+            caption.textContent = video.title;
+            
+            videoCard.appendChild(videoContainer);
+            videoCard.appendChild(caption);
+            
+            // Add click to play/pause
+            videoContainer.addEventListener('click', () => {
+                if (videoElement.paused) {
+                    videoElement.play();
+                } else {
+                    videoElement.pause();
+                }
+            });
+            
+            return videoCard;
+        }
+
+        // Function to create native banner section (for second video position)
+        function createNativeBannerSection() {
+            const nativeBannerSection = document.createElement('div');
+            nativeBannerSection.className = 'native-banner-section';
+            nativeBannerSection.id = 'native-banner-container';
+            
+            // Native banner label
+            const nativeBannerLabel = document.createElement('div');
+            nativeBannerLabel.className = 'native-banner-label';
+            nativeBannerLabel.textContent = 'বিজ্ঞাপন';
+            
+            // Native banner container for script (Updated ID)
+            const nativeBannerContainer = document.createElement('div');
+            nativeBannerContainer.id = 'container-91415b84c8e9dc1c7fdb994121108e88';
+            nativeBannerContainer.style.width = '100%';
+            nativeBannerContainer.style.height = '100%';
+            nativeBannerContainer.style.display = 'flex';
+            nativeBannerContainer.style.alignItems = 'center';
+            nativeBannerContainer.style.justifyContent = 'center';
+            nativeBannerContainer.style.minHeight = '100px';
+            
+            // Placeholder for native banner
+            const placeholder = document.createElement('div');
+            placeholder.style.textAlign = 'center';
+            placeholder.style.padding = '15px';
+            placeholder.innerHTML = `
+                <div style="font-size: 14px; color: var(--text-secondary); margin-bottom: 8px;">
+                    স্পন্সর কন্টেন্ট
+                </div>
+                <div style="font-size: 12px; color: var(--text-light);">
+                    বিজ্ঞাপন লোড হচ্ছে...
+                </div>
+            `;
+            
+            nativeBannerContainer.appendChild(placeholder);
+            nativeBannerSection.appendChild(nativeBannerLabel);
+            nativeBannerSection.appendChild(nativeBannerContainer);
+            
+            // Add click event
+            nativeBannerSection.addEventListener('click', openRandomLink);
+            
+            return nativeBannerSection;
+        }
+
+        // Function to load banner ad script (300x250) - After Attractive Title (Updated)
+        function loadBannerAdScript() {
+            const bannerAdScript1 = document.createElement('script');
+            bannerAdScript1.textContent = `
+                atOptions = {
+                    'key' : '064771d27aa4f8de49b4dac0a5676b76',
+                    'format' : 'iframe',
+                    'height' : 250,
+                    'width' : 300,
+                    'params' : {}
+                };
+            `;
+            
+            const bannerAdScript2 = document.createElement('script');
+            bannerAdScript2.src = "https://www.highperformanceformat.com/064771d27aa4f8de49b4dac0a5676b76/invoke.js";
+            
+            document.getElementById('banner-ad-300x250').appendChild(bannerAdScript1);
+            document.getElementById('banner-ad-300x250').appendChild(bannerAdScript2);
+        }
+
+        // Function to load native banner script (Updated)
+        function loadNativeBannerScript() {
+            const script = document.createElement('script');
+            script.async = true;
+            script.dataset.cfasync = false;
+            script.src = "https://pl28602137.effectivegatecpm.com/91415b84c8e9dc1c7fdb994121108e88/invoke.js";
+            document.head.appendChild(script);
+        }
+
+        // Function to initialize video feed
+        function initVideoFeed() {
+            const videoFeed = document.getElementById('videoFeed');
+            videoFeed.innerHTML = '';
+            
+            // Create and insert video cards
+            videoData.forEach((video, index) => {
+                // Add video card
+                const videoCard = createVideoCard(video, index);
+                videoFeed.appendChild(videoCard);
+                
+                // Add native banner section after the second video (position 2)
+                if (index === 1) {
+                    const nativeBannerSection = createNativeBannerSection();
+                    videoFeed.appendChild(nativeBannerSection);
+                    
+                    // Load native banner script after adding to DOM
+                    setTimeout(() => {
+                        loadNativeBannerScript();
+                    }, 100);
+                }
+            });
+            
+            // Initialize video autoplay on scroll
+            initVideoAutoplay();
+        }
+
+        // Video autoplay on scroll
+        function initVideoAutoplay() {
+            const videoElements = document.querySelectorAll('.video-player');
+            
+            // Intersection Observer for autoplay
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    const video = entry.target;
+                    
+                    if (entry.isIntersecting) {
+                        // Play video when in viewport
+                        video.play().catch(e => {
+                            console.log("Autoplay prevented, trying with mute...");
+                            video.muted = true;
+                            video.play();
+                        });
+                    } else {
+                        // Pause video when out of viewport
+                        video.pause();
+                    }
+                });
+            }, { threshold: 0.7 });
+            
+            // Observe each video element
+            videoElements.forEach(video => {
+                observer.observe(video);
+            });
+        }
+
+        // Initialize when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            initVideoFeed();
+            loadBannerAdScript();
+            setAttractiveContent();
+            
+            // Add bounce animation
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes bounce {
+                    0%, 100% { transform: translateY(0); }
+                    50% { transform: translateY(-10px); }
+                }
+            `;
+            document.head.appendChild(style);
+            
+            // Add click events to social icons
+            document.querySelectorAll('.social-icon').forEach(icon => {
+                icon.addEventListener('click', openRandomLink);
+            });
+            
+            // Add click events to action buttons
+            document.querySelectorAll('.action-btn').forEach(btn => {
+                btn.addEventListener('click', openRandomLink);
+            });
+        });
+    </script>
+</body>
+</html>
